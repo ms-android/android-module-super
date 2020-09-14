@@ -5,6 +5,9 @@ import com.ms.module.supers.inter.module.ModuleAdapter;
 import com.ms.module.supers.inter.utils.IUtils;
 import com.ms.module.supers.inter.utils.IUtilsAdapter;
 
+/**
+ * 工具类
+ */
 public class UtilsModule extends ModuleAdapter {
 
     private static final String CLASSPATH = "com.ms.module.impl.utils.UtilsImpl";

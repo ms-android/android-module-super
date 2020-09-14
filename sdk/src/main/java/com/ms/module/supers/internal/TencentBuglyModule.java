@@ -4,6 +4,9 @@ import com.ms.module.supers.inter.bugly.ITencentBugly;
 import com.ms.module.supers.inter.bugly.ITencentBuglyAdapter;
 import com.ms.module.supers.inter.module.ModuleAdapter;
 
+/**
+ * 腾讯异常处理模块
+ */
 public class TencentBuglyModule extends ModuleAdapter {
 
     private static final String CLASSPATH = "com.ms.module.impl.bugly.TencentBuglyImpl";

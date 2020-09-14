@@ -3,7 +3,9 @@ package com.ms.module.supers.internal;
 import com.ms.module.supers.inter.datapersistence.IDataPersistence;
 import com.ms.module.supers.inter.datapersistence.IDataPersistenceAdapter;
 import com.ms.module.supers.inter.module.ModuleAdapter;
-
+/**
+ * 文件data
+ */
 public class DataPersistenceModule extends ModuleAdapter {
 
     private static final String CLASSPATH = "com.ms.module.impl.datapersistence.DataPersistenceImpl";

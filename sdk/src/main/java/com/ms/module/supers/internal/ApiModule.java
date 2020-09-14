@@ -5,6 +5,9 @@ import com.ms.module.supers.inter.api.IAPI;
 import com.ms.module.supers.inter.api.IAPIAdapter;
 import com.ms.module.supers.inter.module.ModuleAdapter;
 
+/**
+ * API
+ */
 public class ApiModule extends ModuleAdapter {
     private static final String CLASSPATH = "com.ms.module.impl.api.ApiImpl";
     private IAPI api;

@@ -4,6 +4,10 @@ import com.ms.module.supers.inter.mmkv.IMMKV;
 import com.ms.module.supers.inter.mmkv.IMMKVAdapter;
 import com.ms.module.supers.inter.module.ModuleAdapter;
 
+/**
+ * mmkv
+ */
+
 public class MMKVModule extends ModuleAdapter {
 
     private static final String CLASSPATH = "com.ms.module.impl.mmkv.MMKVImpl";

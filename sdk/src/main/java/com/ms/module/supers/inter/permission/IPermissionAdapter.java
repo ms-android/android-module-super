@@ -7,7 +7,6 @@ import com.ms.module.supers.inter.common.ICallBack;
 /// 权限
 public class IPermissionAdapter implements IPermission {
 
-
     @Override
     public void request(FragmentActivity activity, ICallBack callBack, String... pers) {
 

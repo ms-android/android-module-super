@@ -5,6 +5,9 @@ import com.ms.module.supers.inter.module.ModuleAdapter;
 import com.ms.module.supers.inter.permission.IPermission;
 import com.ms.module.supers.inter.permission.IPermissionAdapter;
 
+/**
+ * 权限
+ */
 public class PermissionModule extends ModuleAdapter {
 
     private static final String CLASSPATH = "com.ms.module.impl.permission.PermisionImpl";

@@ -4,7 +4,9 @@ import com.ms.module.supers.inter.module.ModuleAdapter;
 import com.ms.module.supers.inter.net.IRequestSetting;
 import com.ms.module.supers.inter.net.IRequestSettingAdapter;
 
-
+/**
+ * 请求设置
+ */
 public class RequestSettingModule extends ModuleAdapter {
 
 

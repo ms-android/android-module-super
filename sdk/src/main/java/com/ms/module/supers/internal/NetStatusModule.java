@@ -4,6 +4,9 @@ import com.ms.module.supers.inter.common.ICallBack;
 import com.ms.module.supers.inter.module.ModuleAdapter;
 import com.ms.module.supers.inter.net.INetStatusChange;
 
+/**
+ * net change
+ */
 public class NetStatusModule extends ModuleAdapter {
     private static final String CLASSPATH = "com.ms.module.impl.net.NetWorkChangReceiver";
 

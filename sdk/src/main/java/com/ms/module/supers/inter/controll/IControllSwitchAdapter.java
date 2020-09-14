@@ -3,7 +3,6 @@ package com.ms.module.supers.inter.controll;
 public class IControllSwitchAdapter implements IControlSwitch {
     @Override
     public void setLogOut(boolean flag) {
-
     }
 
     @Override

@@ -19,72 +19,156 @@ import com.ms.module.supers.inter.permission.IPermission;
 import com.ms.module.supers.inter.utils.IUtils;
 import com.ms.module.supers.internal.client.ModuleClient;
 
+/**
+ * 模块操作API
+ */
 public class Modules {
     private Modules() {
     }
 
+    // 内置版本标识
     public static final String VERSION = "latest";
 
+    /**
+     * 模块开关配置
+     *
+     * @return
+     */
     public static IControlSwitch getControlSwitch() {
         return ModuleClient.getControllSwitchModule().get();
     }
 
+    /**
+     * 日志模块
+     *
+     * @return
+     */
     public static ILog getLogModule() {
         return ModuleClient.getLogModule().get();
     }
 
+    /**
+     * API模块
+     *
+     * @return
+     */
     public static IAPI getApiModule() {
         return ModuleClient.getApiModule().get();
     }
 
+    /**
+     * 工具类模块
+     *
+     * @return
+     */
     public static IUtils getUtilsModule() {
         return ModuleClient.getUtilsModule().get();
     }
 
+    /**
+     * 临时数据模块
+     *
+     * @return
+     */
     public static IData getDataModule() {
         return ModuleClient.getDataModule().get();
     }
 
+    /**
+     * 动态权限模块
+     *
+     * @return
+     */
     public static IPermission getPermissionModule() {
         return ModuleClient.getPermissionModule().get();
     }
 
+    /**
+     * 网络请求模块
+     *
+     * @return
+     */
     public static IRequest getRequestModule() {
         return ModuleClient.getRequestModule().get();
     }
 
+    /**
+     * 异常处理模式
+     *
+     * @return
+     */
     public static IException getExceptionModule() {
         return ModuleClient.getExceptionModule().get();
     }
 
+    /**
+     * 缓冲模块
+     *
+     * @return
+     */
     public static IMMKV getMmkvModule() {
         return ModuleClient.getMmkvModule().get();
     }
 
+    /**
+     * 数据存储模块
+     *
+     * @return
+     */
     public static IDataPersistence getDataPersistenceModule() {
         return ModuleClient.getDataPersistenceModule().get();
     }
 
+    /**
+     * common 模块
+     *
+     * @return
+     */
     public static ICommon getCommonModule() {
         return ModuleClient.getCommonModule().get();
     }
 
+    /**
+     * 网络请求设置模块
+     *
+     * @return
+     */
     public static IRequestSetting getRequestSettingModule() {
         return ModuleClient.getRequestSettingModule().get();
     }
 
+    /**
+     * 阿里云日志模块
+     *
+     * @return
+     */
     public static IAliyuLog getAliyuLogModule() {
         return ModuleClient.getAliyuLogModule().get();
     }
 
+    /**
+     * 阿里云STS模块
+     *
+     * @return
+     */
     public static ISTS getAliyunSTSModule() {
         return ModuleClient.getAliyunSTSModule().get();
     }
 
+    /**
+     * 腾讯BUGLY模块
+     *
+     * @return
+     */
     public static ITencentBugly getTencentBuglyModule() {
         return ModuleClient.getTencentBuglyModule().get();
     }
 
+    /**
+     * 网络变化
+     *
+     * @return
+     */
     public static INetStatusChange getNetStatusModule() {
         return ModuleClient.getNetStatusModule().get();
     }

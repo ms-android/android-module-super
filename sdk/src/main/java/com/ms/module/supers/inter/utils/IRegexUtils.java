@@ -2,8 +2,10 @@ package com.ms.module.supers.inter.utils;
 
 import java.util.List;
 
+/**
+ * 正则表达式工具类
+ */
 public interface IRegexUtils {
-
 
     boolean isMobileSimple(final CharSequence input);
 
@@ -42,15 +44,15 @@ public interface IRegexUtils {
                          final String replacement);
 
 
+
     boolean isContainChinese(String s);
 
 
     //判断字符串是不是以数字开头
-    boolean isStartWithNumber(String str) ;
+    boolean isStartWithNumber(String str);
 
 
     /**
-     *
      * @param str
      * @return
      */

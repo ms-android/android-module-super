@@ -5,7 +5,9 @@ import com.ms.module.supers.inter.aliyun.log.IAliyuLogAdapter;
 import com.ms.module.supers.inter.module.ModuleAdapter;
 
 public class AliyuLogModule extends ModuleAdapter {
+
     private static final String CLASSPATH = "com.ms.module.impl.aliyun.LogImpl";
+
     private IAliyuLog aliyuLog;
 
     @Override

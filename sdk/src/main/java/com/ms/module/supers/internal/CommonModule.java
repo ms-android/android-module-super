@@ -4,7 +4,9 @@ import com.ms.module.supers.inter.common.ICommon;
 import com.ms.module.supers.inter.common.ICommonAdapter;
 import com.ms.module.supers.inter.module.ModuleAdapter;
 
-
+/**
+ * COMMON
+ */
 public class CommonModule extends ModuleAdapter {
 
     private static final String CLASSPATH = "com.ms.module.impl.common.CommonImpl";

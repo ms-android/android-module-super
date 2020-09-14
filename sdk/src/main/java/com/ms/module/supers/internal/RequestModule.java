@@ -4,8 +4,10 @@ import com.ms.module.supers.inter.module.ModuleAdapter;
 import com.ms.module.supers.inter.net.IRequest;
 import com.ms.module.supers.inter.net.IRequestAdapter;
 
+/**
+ * 请求
+ */
 public class RequestModule extends ModuleAdapter {
-
 
     private static final String CLASSPATH = "com.ms.module.impl.request.RequestImpl";
 

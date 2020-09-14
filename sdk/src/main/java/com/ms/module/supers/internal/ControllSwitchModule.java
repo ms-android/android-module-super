@@ -3,7 +3,9 @@ package com.ms.module.supers.internal;
 import com.ms.module.supers.inter.controll.IControlSwitch;
 import com.ms.module.supers.inter.controll.IControllSwitchAdapter;
 import com.ms.module.supers.inter.module.ModuleAdapter;
-
+/**
+ * 内部开关
+ */
 public class ControllSwitchModule extends ModuleAdapter {
 
 

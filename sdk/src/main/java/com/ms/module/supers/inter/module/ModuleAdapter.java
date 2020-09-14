@@ -3,6 +3,9 @@ package com.ms.module.supers.inter.module;
 
 import com.ms.module.supers.inter.supers.ISupers;
 
+/**
+ * 模块适配器
+ */
 public class ModuleAdapter implements Module {
     @Override
     public String name() {

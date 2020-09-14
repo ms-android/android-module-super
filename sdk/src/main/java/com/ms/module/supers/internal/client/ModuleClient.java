@@ -17,6 +17,9 @@ import com.ms.module.supers.internal.RequestSettingModule;
 import com.ms.module.supers.internal.TencentBuglyModule;
 import com.ms.module.supers.internal.UtilsModule;
 
+/**
+ * 内部客户端
+ */
 public class ModuleClient {
 
     private static LogModule logModule;
@@ -191,6 +194,4 @@ public class ModuleClient {
 
         return tencentBuglyModule;
     }
-
-
 }
