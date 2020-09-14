@@ -6,7 +6,6 @@ import com.ms.module.supers.client.Modules;
 
 public class App extends Application {
 
-
     @Override
     public void onCreate() {
         super.onCreate();
@@ -25,6 +24,5 @@ public class App extends Application {
 
         // 获取APP数据
         Modules.getDataModule().getAppData();
-
     }
 }

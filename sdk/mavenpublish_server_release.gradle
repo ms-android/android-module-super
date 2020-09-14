@@ -1,22 +1,36 @@
-// 发布到本地  快速测试开发
+// 发布版本
 
 apply plugin: 'maven'
 // 组id
 def _groupId = "com.ms"
-// 项目id
+// 项目id// "module-super"
 def _artifactId = rootProject.name
 // 发布类型 aar jar
 def _packaging = "aar"
 // 发布版本
-def _releaseVersion = "latest"
+def _releaseVersion = "latest-RELEASE"
+// 简介
+def _description = "sdk "
 
 uploadArchives {
-    repositories {
-        mavenDeployer {
-            repository url: 'file://' + new File(System.getProperty('user.home'), '.m2/repository').absolutePath
-            pom.version = _releaseVersion
+    repositories.mavenDeployer {
+        repository(url: "http://nexus.mhw828.com/repository/maven-releases/") {
+            println(System.getenv("MAVEN_USERNAME"))
+            println(System.getenv("MAVEN_PASSWORD"))
+            authentication(userName: System.getenv("MAVEN_USERNAME"), password: System.getenv("MAVEN_PASSWORD"))
+        }
+        pom.project {
+            // 注意：【这里通过切换 versionName 的赋值来区分上传快照包还是正式包（snapshot 版本必须以 -SNAPSHOT 结尾）】
+            //version snapshotVersionName
+            //组 maven_pom_groupid
             pom.artifactId = _artifactId
             pom.groupId = _groupId
+            //  类型
+            packaging _packaging
+            // 描述
+            description _description
+            // 版本
+            version = _releaseVersion
         }
     }
 }
