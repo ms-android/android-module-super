@@ -21,6 +21,9 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+        debug {
+
+        }
     }
 
     compileOptions {
@@ -31,7 +34,6 @@ android {
     lintOptions {
         abortOnError false
     }
-
 }
 
 dependencies {
@@ -43,12 +45,15 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
+
 }
 
 
 // 发布到本地 ~/.m2/repository/com/ms/ 下面
-apply from:"./mavenpublish_local.gradle"
+//apply from:"./mavenpublish_local.gradle"
 // 发布版本
 //apply from:"./mavenpublish_server_release.gradle"
 // 快照版本
 //apply from:"./mavenpublish_server_snapshot.gradle"
+
+apply from: "./maven_publish.gradle"
