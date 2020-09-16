@@ -9,8 +9,10 @@ import com.ms.module.supers.internal.DataModule;
 import com.ms.module.supers.internal.DataPersistenceModule;
 import com.ms.module.supers.internal.ExceptionModule;
 import com.ms.module.supers.internal.LogModule;
+import com.ms.module.supers.internal.Login3Module;
 import com.ms.module.supers.internal.MMKVModule;
 import com.ms.module.supers.internal.NetStatusModule;
+import com.ms.module.supers.internal.Pay3Module;
 import com.ms.module.supers.internal.PermissionModule;
 import com.ms.module.supers.internal.RequestModule;
 import com.ms.module.supers.internal.RequestSettingModule;
@@ -193,5 +195,24 @@ public class ModuleClient {
         }
 
         return tencentBuglyModule;
+    }
+
+
+    private static Login3Module login3Module;
+
+    public static Login3Module getLogin3Module() {
+        if (login3Module == null) {
+            login3Module = new Login3Module();
+        }
+        return login3Module;
+    }
+
+    private static Pay3Module pay3Module;
+
+    public static Pay3Module getPay3Module() {
+        if (pay3Module == null) {
+            pay3Module = new Pay3Module();
+        }
+        return pay3Module;
     }
 }
