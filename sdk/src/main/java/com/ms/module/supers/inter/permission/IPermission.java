@@ -17,6 +17,6 @@ public interface IPermission extends ISupers {
      * @param callBack
      * @param pers
      */
-    void request(FragmentActivity activity, ICallBack callBack, String... pers);
+    void request(FragmentActivity activity, PermissionCallBack callBack, String... pers);
 
 }

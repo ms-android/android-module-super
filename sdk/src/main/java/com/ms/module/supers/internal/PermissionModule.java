@@ -10,7 +10,7 @@ import com.ms.module.supers.inter.permission.IPermissionAdapter;
  */
 public class PermissionModule extends ModuleAdapter {
 
-    private static final String CLASSPATH = "com.ms.module.impl.permission.PermisionImpl";
+    private static final String CLASSPATH = "com.ms.module.impl.permission.PermissionImpl";
 
     private IPermission permission;
 

@@ -4,11 +4,13 @@ import androidx.fragment.app.FragmentActivity;
 
 import com.ms.module.supers.inter.common.ICallBack;
 
-/// 权限
+/**
+ * 权限适配器
+ */
 public class IPermissionAdapter implements IPermission {
 
     @Override
-    public void request(FragmentActivity activity, ICallBack callBack, String... pers) {
+    public void request(FragmentActivity activity, PermissionCallBack callBack, String... pers) {
 
     }
 }

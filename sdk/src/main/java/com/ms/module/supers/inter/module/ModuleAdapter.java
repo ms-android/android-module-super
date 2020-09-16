@@ -9,7 +9,7 @@ import com.ms.module.supers.inter.supers.ISupers;
 public class ModuleAdapter implements Module {
     @Override
     public String name() {
-        return null;
+        return this.getClass().getSimpleName();
     }
 
     @Override
