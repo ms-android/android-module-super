@@ -1,4 +1,4 @@
-package com.ms.module.super0
+package com.ms.app
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
