@@ -14,10 +14,9 @@ afterEvaluate {
         publications {
             release(MavenPublication) {
                 from components.release
-
                 groupId = 'com.ms'
                 artifactId = rootProject.name
-                version = 'latest-RELEASE'
+                version = 'latest-release'
             }
         }
     }
