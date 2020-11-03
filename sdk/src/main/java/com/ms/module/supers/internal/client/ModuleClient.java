@@ -18,6 +18,7 @@ import com.ms.module.supers.internal.RequestModule;
 import com.ms.module.supers.internal.RequestSettingModule;
 import com.ms.module.supers.internal.TencentBuglyModule;
 import com.ms.module.supers.internal.UtilsModule;
+import com.ms.module.supers.internal.WeChatClearConfigModule;
 import com.ms.module.supers.internal.WeChatClearModule;
 
 /**
@@ -104,7 +105,6 @@ public class ModuleClient {
     private static RequestModule requestModule;
 
     /**
-     *
      * @return
      */
     public static RequestModule getRequestModule() {
@@ -273,4 +273,12 @@ public class ModuleClient {
     }
 
 
+    private static WeChatClearConfigModule weChatClearConfigModule;
+
+    public static WeChatClearConfigModule getWeChatClearConfigModule() {
+        if (weChatClearConfigModule == null) {
+            weChatClearConfigModule = new WeChatClearConfigModule();
+        }
+        return weChatClearConfigModule;
+    }
 }

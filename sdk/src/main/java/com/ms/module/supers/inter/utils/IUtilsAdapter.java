@@ -83,6 +83,11 @@ public class IUtilsAdapter implements IUtils
     }
 
     @Override
+    public IFileUtils getFileUtils() {
+        return null;
+    }
+
+    @Override
     public void warning(String text) {
 
     }

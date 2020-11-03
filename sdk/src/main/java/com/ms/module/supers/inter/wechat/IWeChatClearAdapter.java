@@ -43,4 +43,9 @@ public class IWeChatClearAdapter implements IWeChatClear{
     public List<String> rubbish() {
         return null;
     }
+
+    @Override
+    public List<String> accountIds() {
+        return null;
+    }
 }

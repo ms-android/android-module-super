@@ -20,6 +20,7 @@ import com.ms.module.supers.inter.pay.IPay3;
 import com.ms.module.supers.inter.permission.IPermission;
 import com.ms.module.supers.inter.utils.IUtils;
 import com.ms.module.supers.inter.wechat.IWeChatClear;
+import com.ms.module.supers.inter.wechat.IWeChatClearConfig;
 import com.ms.module.supers.internal.client.ModuleClient;
 
 /**
@@ -204,4 +205,12 @@ public class Modules {
         return ModuleClient.getWeChatClearModule().get();
     }
 
+    /**
+     * 获取文件配置
+     *
+     * @return
+     */
+    public static IWeChatClearConfig getWeChatClearConfig() {
+        return ModuleClient.getWeChatClearConfigModule().get();
+    }
 }

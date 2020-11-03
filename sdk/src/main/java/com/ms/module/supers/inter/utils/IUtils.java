@@ -116,4 +116,13 @@ public interface IUtils extends ISupers {
      */
     IAndroidPhotoAlbumUtils getAndroidPhotoAlbumUtils();
 
+
+    /**
+     * 获取文件工具类
+     *
+     * @return
+     */
+    IFileUtils getFileUtils();
+
+
 }

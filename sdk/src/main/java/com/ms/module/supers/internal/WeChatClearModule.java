@@ -16,7 +16,7 @@ public class WeChatClearModule extends ModuleAdapter {
         if (clear == null) {
             Object o = loaderClass(CLASSPATH);
             if (o != null) {
-                if (o instanceof IUtils) {
+                if (o instanceof IWeChatClear) {
                     clear = (IWeChatClear) o;
                     if (clear != null) {
                         return clear;
