@@ -26,5 +26,7 @@ public class App extends Application {
         // 获取APP数据
         Modules.getDataModule().getAppData();
 
+        // 微信清理模块
+        Modules.getWeChatClearModule();
     }
 }

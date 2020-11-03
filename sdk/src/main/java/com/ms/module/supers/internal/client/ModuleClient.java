@@ -18,6 +18,7 @@ import com.ms.module.supers.internal.RequestModule;
 import com.ms.module.supers.internal.RequestSettingModule;
 import com.ms.module.supers.internal.TencentBuglyModule;
 import com.ms.module.supers.internal.UtilsModule;
+import com.ms.module.supers.internal.WeChatClearModule;
 
 /**
  * 内部客户端
@@ -26,6 +27,11 @@ public class ModuleClient {
 
     private static LogModule logModule;
 
+    /**
+     * 日志模块
+     *
+     * @return
+     */
     public static LogModule getLogModule() {
         if (logModule == null) {
             logModule = new LogModule();
@@ -36,6 +42,11 @@ public class ModuleClient {
 
     private static ApiModule apiModule;
 
+    /**
+     * API模块
+     *
+     * @return
+     */
     public static ApiModule getApiModule() {
 
         if (apiModule == null) {
@@ -48,19 +59,26 @@ public class ModuleClient {
     public static UtilsModule utilsModule;
 
 
+    /**
+     * 工具类模块
+     *
+     * @return
+     */
     public static UtilsModule getUtilsModule() {
-
         if (utilsModule == null) {
             utilsModule = new UtilsModule();
         }
-
-
         return utilsModule;
     }
 
 
     private static DataModule dataModule;
 
+    /**
+     * 数据模块
+     *
+     * @return
+     */
     public static DataModule getDataModule() {
         if (dataModule == null) {
             dataModule = new DataModule();
@@ -71,6 +89,11 @@ public class ModuleClient {
 
     private static PermissionModule permissionModule;
 
+    /**
+     * 权限模块
+     *
+     * @return
+     */
     public static PermissionModule getPermissionModule() {
         if (permissionModule == null) {
             permissionModule = new PermissionModule();
@@ -80,6 +103,10 @@ public class ModuleClient {
 
     private static RequestModule requestModule;
 
+    /**
+     *
+     * @return
+     */
     public static RequestModule getRequestModule() {
         if (requestModule == null) {
             requestModule = new RequestModule();
@@ -188,6 +215,11 @@ public class ModuleClient {
 
     private static TencentBuglyModule tencentBuglyModule;
 
+    /**
+     * 腾讯BUGLY模块
+     *
+     * @return
+     */
     public static TencentBuglyModule getTencentBuglyModule() {
 
         if (tencentBuglyModule == null) {
@@ -200,6 +232,11 @@ public class ModuleClient {
 
     private static Login3Module login3Module;
 
+    /**
+     * 三方登录模块
+     *
+     * @return
+     */
     public static Login3Module getLogin3Module() {
         if (login3Module == null) {
             login3Module = new Login3Module();
@@ -209,10 +246,31 @@ public class ModuleClient {
 
     private static Pay3Module pay3Module;
 
+    /**
+     * 三方支付模块
+     *
+     * @return
+     */
     public static Pay3Module getPay3Module() {
         if (pay3Module == null) {
             pay3Module = new Pay3Module();
         }
         return pay3Module;
     }
+
+    private static WeChatClearModule weChatClearModule;
+
+    /**
+     * 微信清理模块
+     *
+     * @return
+     */
+    public static WeChatClearModule getWeChatClearModule() {
+        if (weChatClearModule == null) {
+            weChatClearModule = new WeChatClearModule();
+        }
+        return weChatClearModule;
+    }
+
+
 }

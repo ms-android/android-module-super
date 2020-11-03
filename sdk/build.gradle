@@ -27,9 +27,6 @@ android {
             resValue("string", "com_ms_module_super_name", rootProject.name)
             resValue("string", "com_ms_module_super_version", rootProject.ext._version)
             resValue("string", "com_ms_module_super_dependencies", "com.ms:$rootProject.name:$rootProject.ext._version")
-
-
-
             resValue("string", "com_ms_module_super_release_date", new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS Z").format(new Date()).toString())
         }
     }

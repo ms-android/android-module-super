@@ -19,6 +19,7 @@ import com.ms.module.supers.inter.net.IRequestSetting;
 import com.ms.module.supers.inter.pay.IPay3;
 import com.ms.module.supers.inter.permission.IPermission;
 import com.ms.module.supers.inter.utils.IUtils;
+import com.ms.module.supers.inter.wechat.IWeChatClear;
 import com.ms.module.supers.internal.client.ModuleClient;
 
 /**
@@ -192,4 +193,15 @@ public class Modules {
     public static IPay3 getPay3Module() {
         return ModuleClient.getPay3Module().get();
     }
+
+
+    /**
+     * 获取微信清理模块
+     *
+     * @return
+     */
+    public static IWeChatClear getWeChatClearModule() {
+        return ModuleClient.getWeChatClearModule().get();
+    }
+
 }

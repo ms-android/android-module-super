@@ -1,11 +1,13 @@
 package com.ms.module.supers.inter.wechat;
 
+import com.ms.module.supers.inter.supers.ISupers;
+
 import java.util.List;
 
 /**
  * 卫星清理核心模块
  */
-public interface IWeChatClear {
+public interface IWeChatClear extends ISupers {
 
 
     List<String> log();
