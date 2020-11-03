@@ -83,4 +83,37 @@ public interface IUtils extends ISupers {
      * @return
      */
     IPinyinUtils getPinyinUtils();
+
+
+    /**
+     * Android 打开文件的工具类
+     *
+     * @return
+     */
+    IAndroidOpenFileUtils getAndroidOpenFileUtils();
+
+
+    /**
+     * Android 分享文件的工具类
+     *
+     * @return
+     */
+    IAndroidShareUtils getAndroidShareFileUtils();
+
+
+    /**
+     * 字节单位装换工具类
+     *
+     * @return
+     */
+    IByteSizeToStringUnitUtils getByteSizeToStringUnitUtils();
+
+
+    /**
+     * 获取保存图片到相册的工具类
+     *
+     * @return
+     */
+    IAndroidPhotoAlbumUtils getAndroidPhotoAlbumUtils();
+
 }

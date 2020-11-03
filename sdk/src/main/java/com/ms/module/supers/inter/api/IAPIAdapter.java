@@ -8,14 +8,17 @@ public class IAPIAdapter implements IAPI {
     public void setStrategy(String strategy) {
         System.out.println(this.getClass().getSimpleName() + "API模块未集成");
     }
+
     @Override
     public void onSwitch() {
         System.out.println(this.getClass().getSimpleName() + "API模块未集成");
     }
+
     @Override
     public void setBaseUrls(String... baseUrl) {
         System.out.println(this.getClass().getSimpleName() + "API模块未集成");
     }
+
     @Override
     public List<String> getBaseUrls() {
         System.out.println(this.getClass().getSimpleName() + "API模块未集成");
@@ -26,6 +29,7 @@ public class IAPIAdapter implements IAPI {
     public void setCdnUrls(String... cdnUrl) {
         System.out.println(this.getClass().getSimpleName() + "API模块未集成");
     }
+
     @Override
     public List<String> getCdnUrls() {
         System.out.println(this.getClass().getSimpleName() + "API模块未集成");

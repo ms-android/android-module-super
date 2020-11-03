@@ -16,7 +16,7 @@ afterEvaluate {
                 from components.release
                 groupId = 'com.ms'
                 artifactId = rootProject.name
-                version = 'latest-release'
+                version = rootProject.ext._version
             }
         }
     }

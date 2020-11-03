@@ -10,4 +10,24 @@ public class IExceptionAdapter implements IException {
     public void printStackTrace(Throwable e) {
 
     }
+
+    @Override
+    public String name() {
+        return null;
+    }
+
+    @Override
+    public String releaseDate() {
+        return null;
+    }
+
+    @Override
+    public String version() {
+        return null;
+    }
+
+    @Override
+    public String dependencies() {
+        return null;
+    }
 }

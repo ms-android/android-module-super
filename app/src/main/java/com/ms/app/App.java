@@ -3,6 +3,7 @@ package com.ms.app;
 import android.app.Application;
 
 import com.ms.module.supers.client.Modules;
+import com.ms.module.supers.inter.module.Module;
 
 public class App extends Application {
 
@@ -24,5 +25,6 @@ public class App extends Application {
 
         // 获取APP数据
         Modules.getDataModule().getAppData();
+
     }
 }

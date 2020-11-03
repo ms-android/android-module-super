@@ -61,4 +61,29 @@ public class IUtilsAdapter implements IUtils
     public IPinyinUtils getPinyinUtils() {
         return null;
     }
+
+    @Override
+    public IAndroidOpenFileUtils getAndroidOpenFileUtils() {
+        return null;
+    }
+
+    @Override
+    public IAndroidShareUtils getAndroidShareFileUtils() {
+        return null;
+    }
+
+    @Override
+    public IByteSizeToStringUnitUtils getByteSizeToStringUnitUtils() {
+        return null;
+    }
+
+    @Override
+    public IAndroidPhotoAlbumUtils getAndroidPhotoAlbumUtils() {
+        return null;
+    }
+
+    @Override
+    public void warning(String text) {
+
+    }
 }
