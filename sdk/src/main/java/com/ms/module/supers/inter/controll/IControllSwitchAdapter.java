@@ -28,16 +28,6 @@ public class IControllSwitchAdapter implements IControlSwitch {
     }
 
     @Override
-    public void setRequestLog(boolean flag) {
-
-    }
-
-    @Override
-    public boolean getRequestLog() {
-        return false;
-    }
-
-    @Override
     public void setTencentBugly(boolean flag) {
 
     }

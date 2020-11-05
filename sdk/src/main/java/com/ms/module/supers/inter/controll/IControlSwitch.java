@@ -47,21 +47,6 @@ public interface IControlSwitch extends ISupers {
 
 
     /**
-     * 网络请求日志是否输出
-     *
-     * @param flag
-     */
-    void setRequestLog(boolean flag);
-
-    /**
-     * 获取网络请求日志
-     *
-     * @return
-     */
-    boolean getRequestLog();
-
-
-    /**
      * 设置是否上报给腾讯BUGLY
      *
      * @param flag

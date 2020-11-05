@@ -5,19 +5,29 @@ public class Response {
     // -1 exception
     public int code;
     public String body;
-    public String errorMessage;
+    public String message;
     public Throwable throwable;
 
-    public Response(int code, String body, String errorMessage) {
-        this.code = code;
-        this.body = body;
-        this.errorMessage = errorMessage;
+
+    public Response() {
+
     }
 
-    public Response(int code, String body, String errorMessage, Throwable e) {
+    public Response(int code, String body) {
         this.code = code;
         this.body = body;
-        this.errorMessage = errorMessage;
-        throwable = e;
+    }
+
+    public Response(int code, String body, String message) {
+        this.code = code;
+        this.body = body;
+        this.message = message;
+    }
+
+    public Response(int code, String body, String message, Throwable throwable) {
+        this.code = code;
+        this.body = body;
+        this.message = message;
+        this.throwable = throwable;
     }
 }
