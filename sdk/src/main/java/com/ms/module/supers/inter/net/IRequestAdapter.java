@@ -45,4 +45,7 @@ public class IRequestAdapter implements IRequest {
     public Bitmap downloadImage(String s) {
         return null;
     }
+
+
+
 }
