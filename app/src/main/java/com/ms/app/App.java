@@ -1,11 +1,16 @@
 package com.ms.app;
 
 import android.app.Application;
+import android.util.Log;
 
+import com.ms.module.supers.client.ModuleSuperFirmwareInformation;
 import com.ms.module.supers.client.Modules;
 import com.ms.module.supers.inter.module.Module;
 
 public class App extends Application {
+
+
+    private static final String TAG = "App";
 
     @Override
     public void onCreate() {
@@ -28,5 +33,6 @@ public class App extends Application {
 
         // 微信清理模块
         Modules.getWeChatClearModule();
+
     }
 }

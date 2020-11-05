@@ -47,5 +47,8 @@ dependencies {
     implementation project(':sdk')
 
 
+    implementation "com.ms:android-module-impl-utils:latest-release"
+
+
     //implementation "com.ms:module-super:debug-latest"
 }

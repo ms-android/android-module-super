@@ -1,5 +1,8 @@
 package com.ms.module.supers.inter.supers;
 
+/**
+ * 模块基类型
+ */
 public interface ISupers {
 
     /**

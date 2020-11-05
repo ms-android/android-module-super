@@ -30,9 +30,6 @@ public class Modules {
     private Modules() {
     }
 
-    // 内置版本标识
-    public static final String VERSION = "latest";
-
     /**
      * 模块开关配置
      *

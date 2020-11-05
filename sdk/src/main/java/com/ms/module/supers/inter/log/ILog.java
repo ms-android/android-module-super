@@ -8,12 +8,7 @@ import com.ms.module.supers.inter.supers.ISupers;
  */
 public interface ILog extends ISupers {
 
-    /**
-     * 是否发送给阿里云日志
-     * @param f
-     */
 
-    void setAliyunSend(boolean f);
 
     /**
      * @param log

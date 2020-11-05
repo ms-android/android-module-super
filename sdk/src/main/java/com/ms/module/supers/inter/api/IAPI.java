@@ -21,9 +21,11 @@ public interface IAPI extends ISupers {
 
     // 设置cdn url
     void setCdnUrls(String... cdnUrl);
+
     List<String> getCdnUrls();
 
     String getBaseUrl();
+
     String getCdnUrl();
 
 }

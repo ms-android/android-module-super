@@ -5,6 +5,9 @@ import android.graphics.Bitmap;
 
 import java.io.File;
 
+/**
+ * Android 保存照片到相册的工具类
+ */
 public interface IAndroidPhotoAlbumUtils {
 
     /**
@@ -19,7 +22,6 @@ public interface IAndroidPhotoAlbumUtils {
     void saveBitmap2Gallery(Context context, String filePath);
 
     void saveBitmap2Gallery(Context context, File file);
-
 
     void saveVideo2Gallert(Context context, File file);
 

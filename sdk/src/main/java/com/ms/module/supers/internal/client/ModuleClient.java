@@ -275,6 +275,11 @@ public class ModuleClient {
 
     private static WeChatClearConfigModule weChatClearConfigModule;
 
+    /**
+     * 微信配置模块
+     *
+     * @return
+     */
     public static WeChatClearConfigModule getWeChatClearConfigModule() {
         if (weChatClearConfigModule == null) {
             weChatClearConfigModule = new WeChatClearConfigModule();
