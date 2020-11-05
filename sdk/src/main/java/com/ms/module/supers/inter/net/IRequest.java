@@ -25,7 +25,7 @@ public interface IRequest extends ISupers {
      * @param url
      * @param callBack
      */
-    void get(Map<String, String> headers, String url, ICallBack callBack);
+    void get(Map<String, String> headers, String url, IRequestCallBack callBack);
 
     /**
      * @param headers
@@ -41,7 +41,7 @@ public interface IRequest extends ISupers {
      * @param params
      * @param callBack
      */
-    void post(Map<String, String> headers, String url, Map<String, String> params, ICallBack callBack);
+    void post(Map<String, String> headers, String url, Map<String, String> params, IRequestCallBack callBack);
 
 
     /**
@@ -67,7 +67,7 @@ public interface IRequest extends ISupers {
             Map<String, String> headers,
             String url,
             String body,
-            ICallBack callBack
+            IRequestCallBack callBack
     );
 
 

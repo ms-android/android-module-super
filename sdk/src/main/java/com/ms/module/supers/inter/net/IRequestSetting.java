@@ -2,19 +2,29 @@ package com.ms.module.supers.inter.net;
 
 import com.ms.module.supers.inter.supers.ISupers;
 
-public interface IRequestSetting  extends ISupers {
+public interface IRequestSetting extends ISupers {
 
 
     void setConnectTimeout(int value);
-    int getConnectTimeout();
+
+    default int getConnectTimeout() {
+        return 10;
+    }
 
     void setReadTimeout(int value);
-    int getReadTimeout();
+
+    default int getReadTimeout() {
+        return 10;
+    }
 
     void setWriteTimeout(int value);
-    int getWriteTimeout();
+
+    default int getWriteTimeout() {
+        return 10;
+    }
 
     void setRequestLogOut(boolean flag);
+
     boolean getRequestLogOut();
 
 

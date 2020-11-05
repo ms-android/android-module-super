@@ -11,17 +11,13 @@ import java.util.Map;
 public class IRequestAdapter implements IRequest {
 
 
-    public  IRequestAdapter() {
-    }
-
-
     @Override
     public Response get(Map<String, String> headers, String url) {
         return null;
     }
 
     @Override
-    public void get(Map<String, String> headers, String url, ICallBack callBack) {
+    public void get(Map<String, String> headers, String url, IRequestCallBack callBack) {
 
     }
 
@@ -31,7 +27,7 @@ public class IRequestAdapter implements IRequest {
     }
 
     @Override
-    public void post(Map<String, String> headers, String url, Map<String, String> params, ICallBack callBack) {
+    public void post(Map<String, String> headers, String url, Map<String, String> params, IRequestCallBack callBack) {
 
     }
 
@@ -41,7 +37,7 @@ public class IRequestAdapter implements IRequest {
     }
 
     @Override
-    public void requestBody(Map<String, String> headers, String url, String body, ICallBack callBack) {
+    public void requestBody(Map<String, String> headers, String url, String body, IRequestCallBack callBack) {
 
     }
 
@@ -49,6 +45,4 @@ public class IRequestAdapter implements IRequest {
     public Bitmap downloadImage(String s) {
         return null;
     }
-
-
 }
