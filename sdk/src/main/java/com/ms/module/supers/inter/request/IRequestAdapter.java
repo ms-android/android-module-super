@@ -40,8 +40,12 @@ public class IRequestAdapter implements IRequest {
     }
 
     @Override
-    public Bitmap downloadImage(String s) {
+    public Bitmap downloadImage(String url) {
         return null;
     }
 
+    @Override
+    public void downloadImage(String url, RequestCallBack<Bitmap, Throwable> callBack) {
+
+    }
 }

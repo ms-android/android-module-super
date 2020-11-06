@@ -69,5 +69,22 @@ public interface IRequest extends ISupers {
     );
 
 
-    Bitmap downloadImage(String s);
+    /**
+     * 下载图片
+     *
+     * @param url
+     * @return
+     */
+    Bitmap downloadImage(String url);
+
+
+    /**
+     * 异步下载图片
+     *
+     * @param url
+     * @param callBack
+     */
+    void downloadImage(String url, RequestCallBack<Bitmap, Throwable> callBack);
+
+
 }

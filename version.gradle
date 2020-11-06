@@ -1,6 +1,10 @@
+ext {
+     _version = "latest-release"
+    def v = System.getenv("MAVEN_RELEASE_VERSION")
 
-ext{
-
-    _version = "latest-release"
-
+    if (null == v || "".equals(v)) {
+        _version = "latest-release"
+    } else {
+        _version = v
+    }
 }
