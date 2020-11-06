@@ -11,28 +11,22 @@ public class LogModule extends ModuleAdapter {
 
     private static final String CLASSPATH = "com.ms.module.impl.log.LogImpl";
 
-    private ILog log;
+    private ILog instance;
 
     @Override
     public ILog get() {
-        if (log == null) {
-            Object o = loaderClass(CLASSPATH);
-            if (o != null) {
-                if (o instanceof ILog) {
-                    log = (ILog) o;
-                    if (log != null) {
-                        return log;
-                    } else {
-                        log = new IlogAdapter();
-                        return log;
-                    }
-                }
-            }else{
-                log = new IlogAdapter();
-                return log;
-            }
+        if (instance != null) {
+            return instance;
         }
-        return log;
+
+        instance = instance(CLASSPATH);
+
+
+        if (instance == null) {
+            instance = new IlogAdapter();
+        }
+
+        return instance;
     }
 
     @Override

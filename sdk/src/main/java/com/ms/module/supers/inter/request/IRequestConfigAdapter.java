@@ -1,6 +1,6 @@
-package com.ms.module.supers.inter.net;
+package com.ms.module.supers.inter.request;
 
-public class IRequestSettingAdapter implements IRequestSetting {
+public class IRequestConfigAdapter implements IRequestConfig {
 
     @Override
     public void setConnectTimeout(int value) {
@@ -9,7 +9,7 @@ public class IRequestSettingAdapter implements IRequestSetting {
 
     @Override
     public int getConnectTimeout() {
-        return 0;
+        return 10;
     }
 
     @Override
@@ -19,7 +19,7 @@ public class IRequestSettingAdapter implements IRequestSetting {
 
     @Override
     public int getReadTimeout() {
-        return 0;
+        return 10;
     }
 
     @Override
@@ -29,7 +29,7 @@ public class IRequestSettingAdapter implements IRequestSetting {
 
     @Override
     public int getWriteTimeout() {
-        return 0;
+        return 10;
     }
 
     @Override

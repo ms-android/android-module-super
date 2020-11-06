@@ -3,6 +3,7 @@ package com.ms.module.supers.internal;
 import com.ms.module.supers.inter.controll.IControlSwitch;
 import com.ms.module.supers.inter.controll.IControllSwitchAdapter;
 import com.ms.module.supers.inter.module.ModuleAdapter;
+
 /**
  * 内部开关
  */
@@ -11,28 +12,22 @@ public class ControllSwitchModule extends ModuleAdapter {
 
     private static final String CLASSPATH = "com.ms.module.impl.controllswitch.ControllSwitchImpl";
 
-    IControlSwitch controlSwitch;
+    IControlSwitch instance;
 
     @Override
     public IControlSwitch get() {
-        if (controlSwitch == null) {
-            Object o = loaderClass(CLASSPATH);
-            if (o != null) {
-                if (o instanceof IControlSwitch) {
-                    controlSwitch = (IControlSwitch) o;
-                    if (controlSwitch != null) {
-                        return controlSwitch;
-                    } else {
-                        controlSwitch = new IControllSwitchAdapter();
-                        return controlSwitch;
-                    }
-                }
-            } else {
-                controlSwitch = new IControllSwitchAdapter();
-                return controlSwitch;
-            }
+        if (instance != null) {
+            return instance;
         }
-        return controlSwitch;
+
+        instance = instance(CLASSPATH);
+
+
+        if (instance == null) {
+            instance = new IControllSwitchAdapter();
+        }
+
+        return instance;
     }
 
 

@@ -21,7 +21,7 @@ public interface IAliyuLog extends ISupers {
 
     void send(boolean send);
 
-    void log(String TAG, String logText);
+    void log(String tag, String logText);
 
 
     void log(String methodName,

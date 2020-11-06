@@ -11,11 +11,10 @@ import com.ms.module.supers.internal.ExceptionModule;
 import com.ms.module.supers.internal.LogModule;
 import com.ms.module.supers.internal.Login3Module;
 import com.ms.module.supers.internal.MMKVModule;
-import com.ms.module.supers.internal.NetStatusModule;
 import com.ms.module.supers.internal.Pay3Module;
 import com.ms.module.supers.internal.PermissionModule;
 import com.ms.module.supers.internal.RequestModule;
-import com.ms.module.supers.internal.RequestSettingModule;
+import com.ms.module.supers.internal.RequestConfigModule;
 import com.ms.module.supers.internal.TencentBuglyModule;
 import com.ms.module.supers.internal.UtilsModule;
 import com.ms.module.supers.internal.WeChatClearConfigModule;
@@ -160,17 +159,6 @@ public class ModuleClient {
     }
 
 
-    private static NetStatusModule netStatusModule;
-
-    public static NetStatusModule getNetStatusModule() {
-
-        if (netStatusModule == null) {
-            netStatusModule = new NetStatusModule();
-        }
-        return netStatusModule;
-    }
-
-
     private static CommonModule commonModule;
 
 
@@ -181,14 +169,14 @@ public class ModuleClient {
         return commonModule;
     }
 
-    private static RequestSettingModule requestSettingModule;
+    private static RequestConfigModule requestConfigModule;
 
-    public static RequestSettingModule getRequestSettingModule() {
+    public static RequestConfigModule getRequestConfigModule() {
 
-        if (requestSettingModule == null) {
-            requestSettingModule = new RequestSettingModule();
+        if (requestConfigModule == null) {
+            requestConfigModule = new RequestConfigModule();
         }
-        return requestSettingModule;
+        return requestConfigModule;
     }
 
     private static AliyuLogModule aliyuLogModule;

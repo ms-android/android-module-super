@@ -1,13 +1,16 @@
-package com.ms.module.supers.inter.net;
+package com.ms.module.supers.inter.request;
 
 public class Response {
 
-    // -1 exception
-    public int code;
-    public String body;
-    public String message;
-    public Throwable throwable;
 
+    // 请求返回码
+    public int code;
+    // 响应体
+    public String body;
+    // 响应消息
+    public String message;
+    // 异常
+    public Throwable throwable;
 
     public Response() {
 

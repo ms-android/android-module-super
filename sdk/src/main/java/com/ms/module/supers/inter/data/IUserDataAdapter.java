@@ -1,6 +1,6 @@
 package com.ms.module.supers.inter.data;
 
-public class IUserDataAdapter implements  IUserData {
+public class IUserDataAdapter implements IUserData {
     @Override
     public void setUsername(String username) {
 

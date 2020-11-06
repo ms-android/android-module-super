@@ -1,10 +1,8 @@
 package com.ms.module.supers.inter.utils;
 
 
-public class IUtilsAdapter implements IUtils
-{
-    public IUtilsAdapter()
-    {
+public class IUtilsAdapter implements IUtils {
+    public IUtilsAdapter() {
     }
 
     @Override

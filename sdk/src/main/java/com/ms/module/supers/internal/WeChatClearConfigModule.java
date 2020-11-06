@@ -11,24 +11,12 @@ public class WeChatClearConfigModule extends ModuleAdapter {
 
     @Override
     public IWeChatClearConfig get() {
+        if (clearConfig != null) {
+            return clearConfig;
+        }
+        clearConfig = instance(CLASSPATH);
         if (clearConfig == null) {
-            Object o = loaderClass(CLASSPATH);
-            if (o != null) {
-                if (o instanceof IWeChatClearConfig) {
-                    clearConfig = (IWeChatClearConfig) o;
-                    if (clearConfig != null) {
-                        return clearConfig;
-                    } else {
-                        clearConfig = new IWeChatClearConfigAdapter();
-                        return clearConfig;
-                    }
-                } else {
-                    clearConfig = new IWeChatClearConfigAdapter();
-                    return clearConfig;
-                }
-            } else {
-                clearConfig = new IWeChatClearConfigAdapter();
-            }
+            clearConfig = new IWeChatClearConfigAdapter();
         }
         return clearConfig;
     }
@@ -36,6 +24,5 @@ public class WeChatClearConfigModule extends ModuleAdapter {
     @Override
     public String name() {
         return this.getClass().getSimpleName();
-
     }
 }

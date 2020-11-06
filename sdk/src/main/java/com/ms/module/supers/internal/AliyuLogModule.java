@@ -8,31 +8,23 @@ public class AliyuLogModule extends ModuleAdapter {
 
     private static final String CLASSPATH = "com.ms.module.impl.aliyun.LogImpl";
 
-    private IAliyuLog aliyuLog;
+    private IAliyuLog instance;
 
     @Override
     public IAliyuLog get() {
-        if (aliyuLog == null) {
-            Object o = loaderClass(CLASSPATH);
-            if (o != null) {
-                if (o instanceof IAliyuLog) {
-                    aliyuLog = (IAliyuLog) o;
-                    if (aliyuLog != null) {
-                        return aliyuLog;
-                    } else {
-                        aliyuLog = new IAliyuLogAdapter();
-                        return aliyuLog;
-                    }
-                } else {
-                    aliyuLog = new IAliyuLogAdapter();
-                    return aliyuLog;
-                }
-            } else {
-                aliyuLog = new IAliyuLogAdapter();
-                return aliyuLog;
-            }
+
+        if (instance != null) {
+            return instance;
         }
-        return aliyuLog;
+
+        instance = instance(CLASSPATH);
+
+
+        if (instance == null) {
+            instance = new IAliyuLogAdapter();
+        }
+
+        return instance;
     }
 
     @Override

@@ -6,7 +6,7 @@ import com.ms.module.supers.inter.supers.ISupers;
 import java.util.List;
 import java.util.Map;
 
-public interface ISystemUtils  extends ISupers {
+public interface ISystemUtils extends ISupers {
 
     boolean isMobilePhone();
 

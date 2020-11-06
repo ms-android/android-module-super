@@ -2,7 +2,7 @@ package com.ms.module.supers.inter.utils;
 
 import java.lang.reflect.Type;
 
-public class IGsonUtilsAdapter implements  IGsonUtils {
+public class IGsonUtilsAdapter implements IGsonUtils {
     @Override
     public String toJson(Object object) {
         return null;

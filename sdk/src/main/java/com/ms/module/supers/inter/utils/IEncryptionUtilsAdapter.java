@@ -1,6 +1,6 @@
 package com.ms.module.supers.inter.utils;
 
-public class IEncryptionUtilsAdapter implements  IEncryptionUtils {
+public class IEncryptionUtilsAdapter implements IEncryptionUtils {
     @Override
     public String encode(String src) {
         return null;

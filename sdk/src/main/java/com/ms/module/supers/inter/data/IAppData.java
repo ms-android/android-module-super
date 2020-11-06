@@ -25,6 +25,7 @@ public interface IAppData {
     String getUtdid();
 
     void setIp(String values);
+
     String getIp();
 
 }

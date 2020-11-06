@@ -44,7 +44,6 @@ public interface IRegexUtils {
                          final String replacement);
 
 
-
     boolean isContainChinese(String s);
 
 

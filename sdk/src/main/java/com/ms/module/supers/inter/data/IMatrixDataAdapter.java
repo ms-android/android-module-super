@@ -1,6 +1,6 @@
 package com.ms.module.supers.inter.data;
 
-public class IMatrixDataAdapter implements  IMatrixData {
+public class IMatrixDataAdapter implements IMatrixData {
     @Override
     public void setUserId(String userId) {
 

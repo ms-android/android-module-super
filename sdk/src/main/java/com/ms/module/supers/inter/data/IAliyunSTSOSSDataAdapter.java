@@ -1,6 +1,6 @@
 package com.ms.module.supers.inter.data;
 
-public class IAliyunSTSOSSDataAdapter implements  IAliyunSTSOSSData {
+public class IAliyunSTSOSSDataAdapter implements IAliyunSTSOSSData {
     @Override
     public void setInit(boolean initStatus) {
 

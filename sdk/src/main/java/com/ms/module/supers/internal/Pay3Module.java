@@ -1,7 +1,5 @@
 package com.ms.module.supers.internal;
 
-import com.ms.module.supers.inter.login3.ILogin3;
-import com.ms.module.supers.inter.login3.ILogin3Adapter;
 import com.ms.module.supers.inter.module.ModuleAdapter;
 import com.ms.module.supers.inter.pay.IPay3;
 import com.ms.module.supers.inter.pay.IPay3Adapter;
@@ -10,28 +8,22 @@ public class Pay3Module extends ModuleAdapter {
 
     private static final String CLASSPATH = "com.ms.module.impl.pay3.Pay3Impl";
 
-    private IPay3 pay3;
+    private IPay3 instance;
 
     @Override
     public IPay3 get() {
-        if (pay3 == null) {
-            Object o = loaderClass(CLASSPATH);
-            if (o != null) {
-                if (o instanceof ILogin3) {
-                    pay3 = (IPay3) o;
-                    if (pay3 != null) {
-                        return pay3;
-                    } else {
-                        pay3 = new IPay3Adapter();
-                        return pay3;
-                    }
-                }
-            } else {
-                pay3 = new IPay3Adapter();
-                return pay3;
-            }
+        if (instance != null) {
+            return instance;
         }
-        return pay3;
+
+        instance = instance(CLASSPATH);
+
+
+        if (instance == null) {
+            instance = new IPay3Adapter();
+        }
+
+        return instance;
     }
 
     @Override

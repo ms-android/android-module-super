@@ -3,6 +3,7 @@ package com.ms.module.supers.internal;
 import com.ms.module.supers.inter.exception.IException;
 import com.ms.module.supers.inter.exception.IExceptionAdapter;
 import com.ms.module.supers.inter.module.ModuleAdapter;
+
 /**
  * exception
  */
@@ -10,28 +11,18 @@ public class ExceptionModule extends ModuleAdapter {
 
     private static final String CLASSPATH = "com.ms.module.impl.exception.ExceptionImpl";
 
-    IException exception;
+    IException instance;
 
     @Override
     public IException get() {
-        if (exception == null) {
-            Object o = loaderClass(CLASSPATH);
-            if (o != null) {
-                if (o instanceof IException) {
-                    exception = (IException) o;
-                    if (exception != null) {
-                        return exception;
-                    } else {
-                        exception = new IExceptionAdapter();
-                        return exception;
-                    }
-                }
-            }else{
-                exception = new IExceptionAdapter();
-                return exception;
-            }
+        if (instance != null) {
+            return instance;
         }
-        return exception;
+        instance = instance(CLASSPATH);
+        if (instance == null) {
+            instance = new IExceptionAdapter();
+        }
+        return instance;
     }
 
     @Override

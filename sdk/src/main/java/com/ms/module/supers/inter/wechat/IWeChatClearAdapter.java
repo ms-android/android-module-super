@@ -2,7 +2,7 @@ package com.ms.module.supers.inter.wechat;
 
 import java.util.List;
 
-public class IWeChatClearAdapter implements IWeChatClear{
+public class IWeChatClearAdapter implements IWeChatClear {
 
     @Override
     public List<String> log() {

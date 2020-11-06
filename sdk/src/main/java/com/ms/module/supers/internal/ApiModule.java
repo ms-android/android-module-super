@@ -10,31 +10,22 @@ import com.ms.module.supers.inter.module.ModuleAdapter;
  */
 public class ApiModule extends ModuleAdapter {
     private static final String CLASSPATH = "com.ms.module.impl.api.ApiImpl";
-    private IAPI api;
+    private IAPI instance;
 
     @Override
     public IAPI get() {
-        if (api == null) {
-            Object o = loaderClass(CLASSPATH);
-            if (o != null) {
-                if (o instanceof IAPI) {
-                    api = (IAPI) o;
-                    if (api != null) {
-                        return api;
-                    } else {
-                        api = new IAPIAdapter();
-                        return api;
-                    }
-                }else{
-                    api = new IAPIAdapter();
-                    return api;
-                }
-            } else {
-                api = new IAPIAdapter();
-                return api;
-            }
+        if (instance != null) {
+            return instance;
         }
-        return api;
+
+        instance = instance(CLASSPATH);
+
+
+        if (instance == null) {
+            instance = new IAPIAdapter();
+        }
+
+        return instance;
     }
 
     @Override

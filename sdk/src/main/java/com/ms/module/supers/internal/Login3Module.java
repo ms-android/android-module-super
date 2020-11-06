@@ -8,28 +8,18 @@ public class Login3Module extends ModuleAdapter {
 
     private static final String CLASSPATH = "com.ms.module.impl.login3.Login3Impl";
 
-    private ILogin3 login3;
+    private ILogin3 instance;
 
     @Override
     public ILogin3 get() {
-        if (login3 == null) {
-            Object o = loaderClass(CLASSPATH);
-            if (o != null) {
-                if (o instanceof ILogin3) {
-                    login3 = (ILogin3) o;
-                    if (login3 != null) {
-                        return login3;
-                    } else {
-                        login3 = new ILogin3Adapter();
-                        return login3;
-                    }
-                }
-            } else {
-                login3 = new ILogin3Adapter();
-                return login3;
-            }
+        if (instance != null) {
+            return instance;
         }
-        return login3;
+        instance = instance(CLASSPATH);
+        if (instance == null) {
+            instance = new ILogin3Adapter();
+        }
+        return instance;
     }
 
     @Override

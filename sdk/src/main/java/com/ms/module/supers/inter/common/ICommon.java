@@ -8,5 +8,4 @@ public interface ICommon extends ISupers {
 
     void initServerBaseUrl();
 
-
 }

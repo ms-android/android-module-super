@@ -17,6 +17,7 @@ public interface IAPI extends ISupers {
 
     // 设置base url
     void setBaseUrls(String... baseUrl);
+
     List<String> getBaseUrls();
 
     // 设置cdn url

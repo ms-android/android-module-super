@@ -2,7 +2,7 @@ package com.ms.module.supers.inter.data;
 
 import android.app.Application;
 
-public class IAppDataAdapter implements  IAppData {
+public class IAppDataAdapter implements IAppData {
     @Override
     public void setApplication(Application application) {
 

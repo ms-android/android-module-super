@@ -13,9 +13,8 @@ import com.ms.module.supers.inter.exception.IException;
 import com.ms.module.supers.inter.log.ILog;
 import com.ms.module.supers.inter.login3.ILogin3;
 import com.ms.module.supers.inter.mmkv.IMMKV;
-import com.ms.module.supers.inter.net.INetStatusChange;
-import com.ms.module.supers.inter.net.IRequest;
-import com.ms.module.supers.inter.net.IRequestSetting;
+import com.ms.module.supers.inter.request.IRequest;
+import com.ms.module.supers.inter.request.IRequestConfig;
 import com.ms.module.supers.inter.pay.IPay3;
 import com.ms.module.supers.inter.permission.IPermission;
 import com.ms.module.supers.inter.utils.IUtils;
@@ -134,8 +133,8 @@ public class Modules {
      *
      * @return
      */
-    public static IRequestSetting getRequestSettingModule() {
-        return ModuleClient.getRequestSettingModule().get();
+    public static IRequestConfig getRequestSettingModule() {
+        return ModuleClient.getRequestConfigModule().get();
     }
 
     /**
@@ -163,15 +162,6 @@ public class Modules {
      */
     public static ITencentBugly getTencentBuglyModule() {
         return ModuleClient.getTencentBuglyModule().get();
-    }
-
-    /**
-     * 网络变化
-     *
-     * @return
-     */
-    public static INetStatusChange getNetStatusModule() {
-        return ModuleClient.getNetStatusModule().get();
     }
 
     /**

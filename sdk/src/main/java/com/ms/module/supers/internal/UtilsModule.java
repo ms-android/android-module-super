@@ -16,24 +16,12 @@ public class UtilsModule extends ModuleAdapter {
 
     @Override
     public IUtils get() {
+        if (utils != null) {
+            return utils;
+        }
+        utils = instance(CLASSPATH);
         if (utils == null) {
-            Object o = loaderClass(CLASSPATH);
-            if (o != null) {
-                if (o instanceof IUtils) {
-                    utils = (IUtils) o;
-                    if (utils != null) {
-                        return utils;
-                    } else {
-                        utils = new IUtilsAdapter();
-                        return utils;
-                    }
-                } else {
-                    utils = new IUtilsAdapter();
-                    return utils;
-                }
-            } else {
-                utils = new IUtilsAdapter();
-            }
+            utils = new IUtilsAdapter();
         }
         return utils;
     }

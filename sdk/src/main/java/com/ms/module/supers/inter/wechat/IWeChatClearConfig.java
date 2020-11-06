@@ -1,6 +1,5 @@
 package com.ms.module.supers.inter.wechat;
 
-import androidx.annotation.StyleableRes;
 
 import com.ms.module.supers.inter.supers.ISupers;
 

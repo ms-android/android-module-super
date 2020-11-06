@@ -34,5 +34,8 @@ public class App extends Application {
         // 微信清理模块
         Modules.getWeChatClearModule();
 
+
+
+
     }
 }

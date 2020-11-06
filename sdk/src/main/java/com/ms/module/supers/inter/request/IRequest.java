@@ -1,10 +1,8 @@
-package com.ms.module.supers.inter.net;
-
+package com.ms.module.supers.inter.request;
 
 
 import android.graphics.Bitmap;
 
-import com.ms.module.supers.inter.common.ICallBack;
 import com.ms.module.supers.inter.supers.ISupers;
 
 import java.util.Map;
@@ -25,7 +23,7 @@ public interface IRequest extends ISupers {
      * @param url
      * @param callBack
      */
-    void get(Map<String, String> headers, String url, IRequestCallBack callBack);
+    void get(Map<String, String> headers, String url, RequestCallBack callBack);
 
     /**
      * @param headers
@@ -41,7 +39,7 @@ public interface IRequest extends ISupers {
      * @param params
      * @param callBack
      */
-    void post(Map<String, String> headers, String url, Map<String, String> params, IRequestCallBack callBack);
+    void post(Map<String, String> headers, String url, Map<String, String> params, RequestCallBack callBack);
 
 
     /**
@@ -67,9 +65,9 @@ public interface IRequest extends ISupers {
             Map<String, String> headers,
             String url,
             String body,
-            IRequestCallBack callBack
+            RequestCallBack callBack
     );
 
 
-     Bitmap downloadImage(String s);
+    Bitmap downloadImage(String s);
 }

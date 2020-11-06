@@ -11,32 +11,23 @@ public class CommonModule extends ModuleAdapter {
 
     private static final String CLASSPATH = "com.ms.module.impl.common.CommonImpl";
 
-    private ICommon iCommon;
+    private ICommon instance;
 
 
     @Override
     public ICommon get() {
-        if (iCommon == null) {
-            Object o = loaderClass(CLASSPATH);
-            if (o != null) {
-                if (o instanceof ICommon) {
-                    iCommon = (ICommon) o;
-                    if (iCommon != null) {
-                        return iCommon;
-                    } else {
-                        iCommon = new ICommonAdapter();
-                        return iCommon;
-                    }
-                } else {
-                    iCommon = new ICommonAdapter();
-                    return iCommon;
-                }
-            } else {
-                iCommon = new ICommonAdapter();
-                return iCommon;
-            }
+        if (instance != null) {
+            return instance;
         }
-        return iCommon;
+
+        instance = instance(CLASSPATH);
+
+
+        if (instance == null) {
+            instance = new ICommonAdapter();
+        }
+
+        return instance;
     }
 
     @Override

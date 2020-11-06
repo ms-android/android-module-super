@@ -37,4 +37,17 @@ public class ModuleAdapter implements Module {
         }
         return o;
     }
+
+    public <T> T instance(String clazz) {
+        try {
+            Class<?> aClass = Class.forName(clazz);
+            Object o = aClass.newInstance();
+            if (o != null) {
+                return (T) o;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }

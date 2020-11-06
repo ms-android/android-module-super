@@ -2,13 +2,19 @@ package com.ms.module.supers.inter.utils;
 
 public interface IResUtils {
 
-          int getLayoutId(String paramString);
-          int getStringId(String paramString);
-          int getDrawableId(String paramString) ;
-          int getStyleId(String paramString) ;
-          int getId(String paramString);
-          int getColorId(String paramString);
-          int getArrayId(String paramString) ;
+    int getLayoutId(String paramString);
 
-          String getString(int id);
+    int getStringId(String paramString);
+
+    int getDrawableId(String paramString);
+
+    int getStyleId(String paramString);
+
+    int getId(String paramString);
+
+    int getColorId(String paramString);
+
+    int getArrayId(String paramString);
+
+    String getString(int id);
 }

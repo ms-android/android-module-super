@@ -4,7 +4,7 @@ import android.app.Activity;
 
 public interface ILogin {
 
-    void login(Activity activity,LoginCallBack callBack);
+    void login(Activity activity, LoginCallBack callBack);
 
 
 }

@@ -15,20 +15,12 @@ public class TencentBuglyModule extends ModuleAdapter {
 
     @Override
     public ITencentBugly get() {
+        if (tencentBugly != null) {
+            return tencentBugly;
+        }
+        tencentBugly = instance(CLASSPATH);
         if (tencentBugly == null) {
-            Object o = loaderClass(CLASSPATH);
-            if (o != null) {
-                if (o instanceof ITencentBugly) {
-                    tencentBugly = (ITencentBugly) o;
-                    if (tencentBugly != null) {
-                        return tencentBugly;
-                    } else {
-                        tencentBugly = new ITencentBuglyAdapter();
-                    }
-                }
-            } else {
-                tencentBugly = new ITencentBuglyAdapter();
-            }
+            tencentBugly = new ITencentBuglyAdapter();
         }
         return tencentBugly;
     }

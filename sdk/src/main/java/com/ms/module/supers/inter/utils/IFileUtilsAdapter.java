@@ -3,7 +3,7 @@ package com.ms.module.supers.inter.utils;
 import java.io.File;
 import java.util.List;
 
-public class IFileUtilsAdapter  implements IFileUtils{
+public class IFileUtilsAdapter implements IFileUtils {
 
     @Override
     public void copyFile(String sourcePath, String targerPath) {

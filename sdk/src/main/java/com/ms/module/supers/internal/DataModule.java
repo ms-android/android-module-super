@@ -4,33 +4,25 @@ package com.ms.module.supers.internal;
 import com.ms.module.supers.inter.data.IData;
 import com.ms.module.supers.inter.data.IDataAdapter;
 import com.ms.module.supers.inter.module.ModuleAdapter;
+
 /**
  * data
  */
 public class DataModule extends ModuleAdapter {
 
     private static final String CLASSPATH = "com.ms.module.impl.data.DataImpl";
-    private IData data;
+    private IData instance;
 
     @Override
     public IData get() {
-        if (data == null) {
-            Object o = loaderClass(CLASSPATH);
-            if (o != null) {
-                if (o instanceof IData) {
-                    data = (IData) o;
-
-                    if (data != null) {
-                        return data;
-                    } else {
-                        data = new IDataAdapter();
-                    }
-                }
-            } else {
-                data = new IDataAdapter();
-            }
+        if (instance != null) {
+            return instance;
         }
-        return data;
+        instance = instance(CLASSPATH);
+        if (instance == null) {
+            instance = new IDataAdapter();
+        }
+        return instance;
     }
 
     @Override
