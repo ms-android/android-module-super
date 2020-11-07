@@ -17,8 +17,8 @@ import com.ms.module.supers.internal.RequestModule;
 import com.ms.module.supers.internal.RequestConfigModule;
 import com.ms.module.supers.internal.TencentBuglyModule;
 import com.ms.module.supers.internal.UtilsModule;
-import com.ms.module.supers.internal.WeChatClearConfigModule;
-import com.ms.module.supers.internal.WeChatClearModule;
+import com.ms.module.supers.internal.WeChatCleanConfigModule;
+import com.ms.module.supers.internal.WeChatCleanModule;
 
 /**
  * 内部客户端
@@ -246,32 +246,32 @@ public class ModuleClient {
         return pay3Module;
     }
 
-    private static WeChatClearModule weChatClearModule;
+    private static WeChatCleanModule weChatCleanModule;
 
     /**
      * 微信清理模块
      *
      * @return
      */
-    public static WeChatClearModule getWeChatClearModule() {
-        if (weChatClearModule == null) {
-            weChatClearModule = new WeChatClearModule();
+    public static WeChatCleanModule getWeChatCleanModule() {
+        if (weChatCleanModule == null) {
+            weChatCleanModule = new WeChatCleanModule();
         }
-        return weChatClearModule;
+        return weChatCleanModule;
     }
 
 
-    private static WeChatClearConfigModule weChatClearConfigModule;
+    private static WeChatCleanConfigModule weChatCleanConfigModule;
 
     /**
      * 微信配置模块
      *
      * @return
      */
-    public static WeChatClearConfigModule getWeChatClearConfigModule() {
-        if (weChatClearConfigModule == null) {
-            weChatClearConfigModule = new WeChatClearConfigModule();
+    public static WeChatCleanConfigModule getWeChatCleanConfigModule() {
+        if (weChatCleanConfigModule == null) {
+            weChatCleanConfigModule = new WeChatCleanConfigModule();
         }
-        return weChatClearConfigModule;
+        return weChatCleanConfigModule;
     }
 }

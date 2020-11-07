@@ -10,7 +10,7 @@ import com.ms.module.supers.inter.request.IRequestConfigAdapter;
 public class RequestConfigModule extends ModuleAdapter {
 
 
-    private static final String CLASSPATH = "com.ms.module.impl.request.RequestSettingImpl";
+    private static final String CLASSPATH = "com.ms.module.impl.request.RequestConfigImpl";
 
     private IRequestConfig requestSetting;
 

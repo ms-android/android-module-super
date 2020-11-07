@@ -2,7 +2,7 @@ package com.ms.module.supers.inter.wechat;
 
 import java.util.List;
 
-public class IWeChatClearConfigAdapter implements IWeChatClearConfig {
+public class IWeChatCleanConfigAdapter implements IWeChatCleanConfig {
 
     @Override
     public void setImage(String... paths) {

@@ -25,10 +25,6 @@ public class IUtilsAdapter implements IUtils {
         return null;
     }
 
-    @Override
-    public IMD5Utils getMd5Utils() {
-        return null;
-    }
 
     @Override
     public IGsonUtils getGsonUtils() {

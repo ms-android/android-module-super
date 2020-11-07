@@ -13,8 +13,13 @@ public class IControllSwitchAdapter implements IControlSwitch {
     }
 
     @Override
-    public void setAliyunSend(boolean f) {
+    public void setAliyunLogSend(boolean flag) {
 
+    }
+
+    @Override
+    public boolean getAliyunLogSend() {
+        return false;
     }
 
     @Override

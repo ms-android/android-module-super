@@ -1,4 +1,5 @@
 package com.ms.module.supers.inter.utils;
 
-public interface IRsaUtilsAdapter {
+public class IRsaUtilsAdapter implements IRsaUtils {
+
 }

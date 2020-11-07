@@ -1,22 +1,22 @@
 package com.ms.module.supers.internal;
 
 import com.ms.module.supers.inter.module.ModuleAdapter;
-import com.ms.module.supers.inter.wechat.IWeChatClearConfig;
-import com.ms.module.supers.inter.wechat.IWeChatClearConfigAdapter;
+import com.ms.module.supers.inter.wechat.IWeChatCleanConfig;
+import com.ms.module.supers.inter.wechat.IWeChatCleanConfigAdapter;
 
-public class WeChatClearConfigModule extends ModuleAdapter {
+public class WeChatCleanConfigModule extends ModuleAdapter {
     private static final String CLASSPATH = "com.ms.module.impl.wechat.WeChatClearConfigImpl";
 
-    private IWeChatClearConfig clearConfig;
+    private IWeChatCleanConfig clearConfig;
 
     @Override
-    public IWeChatClearConfig get() {
+    public IWeChatCleanConfig get() {
         if (clearConfig != null) {
             return clearConfig;
         }
         clearConfig = instance(CLASSPATH);
         if (clearConfig == null) {
-            clearConfig = new IWeChatClearConfigAdapter();
+            clearConfig = new IWeChatCleanConfigAdapter();
         }
         return clearConfig;
     }

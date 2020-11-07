@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Map;
 
 public class ISystemUtilsAdapter implements ISystemUtils {
+
+
     @Override
     public boolean isMobilePhone() {
         return false;
@@ -21,11 +23,6 @@ public class ISystemUtilsAdapter implements ISystemUtils {
 
     @Override
     public String getAndroidId() {
-        return null;
-    }
-
-    @Override
-    public String getUmid() {
         return null;
     }
 
@@ -95,17 +92,7 @@ public class ISystemUtilsAdapter implements ISystemUtils {
     }
 
     @Override
-    public String adCode() {
-        return null;
-    }
-
-    @Override
     public String getCurrentTimeZone() {
-        return null;
-    }
-
-    @Override
-    public String getNetWorkTypeName() {
         return null;
     }
 

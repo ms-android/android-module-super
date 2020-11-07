@@ -6,6 +6,6 @@ public interface RequestCallBack<Response, Throwable> extends ICallBack {
 
     void onSuccess(Response response);
 
-    void onFilure(Throwable throwable);
+    void onFailure(Throwable throwable);
 
 }

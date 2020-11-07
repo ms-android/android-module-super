@@ -18,8 +18,8 @@ import com.ms.module.supers.inter.request.IRequestConfig;
 import com.ms.module.supers.inter.pay.IPay3;
 import com.ms.module.supers.inter.permission.IPermission;
 import com.ms.module.supers.inter.utils.IUtils;
-import com.ms.module.supers.inter.wechat.IWeChatClear;
-import com.ms.module.supers.inter.wechat.IWeChatClearConfig;
+import com.ms.module.supers.inter.wechat.IWeChatClean;
+import com.ms.module.supers.inter.wechat.IWeChatCleanConfig;
 import com.ms.module.supers.internal.client.ModuleClient;
 
 /**
@@ -133,7 +133,7 @@ public class Modules {
      *
      * @return
      */
-    public static IRequestConfig getRequestSettingModule() {
+    public static IRequestConfig getRequestConfigModule() {
         return ModuleClient.getRequestConfigModule().get();
     }
 
@@ -188,8 +188,8 @@ public class Modules {
      *
      * @return
      */
-    public static IWeChatClear getWeChatClearModule() {
-        return ModuleClient.getWeChatClearModule().get();
+    public static IWeChatClean getWeChatClearModule() {
+        return ModuleClient.getWeChatCleanModule().get();
     }
 
     /**
@@ -197,7 +197,7 @@ public class Modules {
      *
      * @return
      */
-    public static IWeChatClearConfig getWeChatClearConfig() {
-        return ModuleClient.getWeChatClearConfigModule().get();
+    public static IWeChatCleanConfig getWeChatClearConfig() {
+        return ModuleClient.getWeChatCleanConfigModule().get();
     }
 }

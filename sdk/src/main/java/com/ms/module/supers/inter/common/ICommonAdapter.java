@@ -5,9 +5,4 @@ public class ICommonAdapter implements ICommon {
     public void init() {
         System.out.println(ICommon.class.getSimpleName() + "未实现");
     }
-
-    @Override
-    public void initServerBaseUrl() {
-        System.out.println(ICommon.class.getSimpleName() + "未实现");
-    }
 }

@@ -6,6 +6,4 @@ public interface ICommon extends ISupers {
 
     void init();
 
-    void initServerBaseUrl();
-
 }

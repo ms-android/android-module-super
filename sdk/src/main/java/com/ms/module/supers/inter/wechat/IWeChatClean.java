@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * 卫星清理核心模块
  */
-public interface IWeChatClear extends ISupers {
+public interface IWeChatClean extends ISupers {
 
 
     /**

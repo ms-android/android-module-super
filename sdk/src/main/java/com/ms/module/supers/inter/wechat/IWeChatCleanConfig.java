@@ -5,7 +5,7 @@ import com.ms.module.supers.inter.supers.ISupers;
 
 import java.util.List;
 
-public interface IWeChatClearConfig extends ISupers {
+public interface IWeChatCleanConfig extends ISupers {
 
     void setImage(String... paths);
 

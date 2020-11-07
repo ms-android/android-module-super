@@ -35,12 +35,6 @@ public interface IUtils extends ISupers {
      */
     IThreadPoolUtils getThreadPoolUtils();
 
-    /**
-     * MD5工具类
-     *
-     * @return
-     */
-    IMD5Utils getMd5Utils();
 
     /**
      * Gson工具类

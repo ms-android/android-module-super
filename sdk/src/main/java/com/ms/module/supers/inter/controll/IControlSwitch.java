@@ -23,12 +23,19 @@ public interface IControlSwitch extends ISupers {
     boolean getLogOut();
 
     /**
-     * 日志是否发送给阿里云日志
+     * 是否发送给阿里云日志
      *
-     * @param f
+     * @param flag
      */
 
-    void setAliyunSend(boolean f);
+    void setAliyunLogSend(boolean flag);
+
+    /**
+     * 获取阿里云日志发送状态
+     *
+     * @return
+     */
+    boolean getAliyunLogSend();
 
 
     /**
